@@ -11,10 +11,10 @@ const topics = [
 {slug:"reforma-tributaria",icon:Building2,title:"Reforma Tributária",text:"Preparação para as mudanças e avaliação dos reflexos na operação da empresa."}
 ];
 const timeline=[
-{year:"2026",title:"Ano de testes",text:"CBS de 0,9% e IBS de 0,1% em fase de teste. Os valores recolhidos podem ser compensados com PIS/Cofins e outros tributos federais. A dispensa do recolhimento depende do cumprimento das obrigações acessórias previstas nas regras aplicáveis."},
-{year:"2027–2028",title:"CBS e Imposto Seletivo",text:"Início da cobrança da CBS pela alíquota de referência, com redução de 0,1 ponto percentual, e do IBS à alíquota de 0,1%. PIS e Cofins são extintos; as alíquotas do IPI ficam zeradas, exceto para produtos com industrialização incentivada na Zona Franca de Manaus; e começa a cobrança do Imposto Seletivo."},
+{year:"2026",title:"Ano de testes",text:"CBS de 0,9% e IBS de 0,1% em fase de teste. Os valores recolhidos podem ser compensados com PIS/Cofins no mesmo período de apuração. O contribuinte que cumprir as obrigações acessórias previstas fica dispensado do recolhimento desses valores em 2026."},
+{year:"2027–2028",title:"CBS e Imposto Seletivo",text:"Início da cobrança da CBS pela alíquota de referência, com redução de 0,1 ponto percentual, e do IBS à alíquota de 0,1%. PIS e Cofins são extintos; as alíquotas do IPI ficam zeradas, exceto para produtos que também sejam industrializados na Zona Franca de Manaus; e começa a cobrança do Imposto Seletivo."},
 {year:"2029–2032",title:"Transição de ICMS e ISS",text:"A substituição ocorre gradualmente: em 2029, IBS corresponde a 10% e ICMS/ISS a 90%; em 2030, 20% e 80%; em 2031, 30% e 70%; em 2032, 40% e 60%, respectivamente."},
-{year:"2033",title:"Novo modelo integral",text:"O novo modelo entra em vigência integral. ICMS e ISS são extintos, e o IBS passa a operar integralmente. As alíquotas do IPI permanecem zeradas, ressalvada a exceção relacionada à Zona Franca de Manaus."}
+{year:"2033",title:"Novo modelo integral",text:"O novo modelo entra em vigência integral. ICMS e ISS são extintos, e o IBS passa a operar integralmente. As alíquotas do IPI permanecem zeradas, com exceção dos produtos que também sejam industrializados na Zona Franca de Manaus."}
 ];
 const experience=[
 {role:"Contadora",company:"Kluppell Assessoria Empresarial",period:"Abril de 2023 – atual",detail:"Contabilidade e consultoria tributária",place:"Curitiba · Remoto"},
