@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Meneghetti | Contabilidade & Advocacia",
+  title: "Karine Kluppell | Contabilidade & Advocacia",
   description: "Soluções contábeis e jurídicas com visão estratégica, proximidade e confiança.",
 };
 
