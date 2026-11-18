@@ -1,54 +1,54 @@
 import Link from "next/link";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
-const services: Record<string, { title: string; intro: string; details: string[]; note: string }> = {
-  trabalhista: {
-    title: "Direito Trabalhista",
-    intro: "Orientação jurídica em questões relacionadas às relações de trabalho, com análise cuidadosa dos direitos e deveres envolvidos.",
-    details: ["Análise de situações ligadas ao contrato de trabalho e às condições de trabalho.", "Orientação sobre verbas trabalhistas, rescisões e demais questões da relação entre empregado e empregador.", "Avaliação inicial de documentos e dos caminhos jurídicos possíveis para cada caso."],
-    note: "A atuação e as medidas cabíveis dependem da análise individual dos fatos e documentos."
+const services: Record<string, { title: string; intro: string; importance: string; benefits: string[]; role: string; note: string }> = {
+  "recuperacao-creditos": {
+    title: "Recuperação de créditos tributários",
+    intro: "Uma análise cuidadosa da apuração e dos recolhimentos pode revelar valores pagos indevidamente ou a maior, ou créditos que a empresa pode aproveitar conforme a legislação.",
+    importance: "Tributos pagos a maior ou créditos não aproveitados podem representar recursos importantes para a empresa. Identificar essas situações ajuda a evitar perdas financeiras e a melhorar a gestão do caixa, sempre respeitando os requisitos legais.",
+    benefits: ["Identificar possíveis pagamentos indevidos ou feitos a maior.", "Avaliar créditos tributários que possam ser aproveitados ou recuperados.", "Organizar documentos e informações para dar suporte aos procedimentos cabíveis.", "Trazer mais clareza sobre oportunidades e riscos, sem presumir que todo valor analisado será recuperável."],
+    role: "O trabalho da Karine é examinar informações contábeis e fiscais, revisar os critérios aplicáveis, identificar oportunidades e inconsistências e orientar tecnicamente os próximos passos de acordo com a legislação e os documentos da empresa.",
+    note: "A existência, o valor e a possibilidade de recuperação de créditos dependem da análise individual, da documentação e das regras aplicáveis a cada período e contribuinte."
   },
-  previdenciario: {
-    title: "Direito Previdenciário",
-    intro: "Acompanhamento de questões relacionadas à Previdência Social e à busca por benefícios previdenciários.",
-    details: ["Orientação sobre benefícios e requisitos previdenciários.", "Análise de histórico contributivo e documentação apresentada.", "Acompanhamento de pedidos, revisões e recursos, conforme o caso."],
-    note: "A possibilidade de concessão ou revisão depende dos requisitos legais e da documentação de cada pessoa."
+  "auditoria-tributaria": {
+    title: "Auditoria tributária",
+    intro: "A auditoria tributária revisa apurações, declarações e procedimentos fiscais para verificar se as informações estão consistentes e se as obrigações estão sendo tratadas corretamente.",
+    importance: "Erros fiscais podem gerar pagamentos indevidos, multas, juros e insegurança para a gestão. Uma revisão organizada ajuda a empresa a conhecer sua situação, corrigir falhas e tomar decisões com informações mais confiáveis.",
+    benefits: ["Conferir a coerência entre documentos, escriturações e declarações.", "Identificar divergências, riscos e possíveis oportunidades.", "Apoiar a correção de inconsistências e a melhoria dos controles internos.", "Dar mais previsibilidade e segurança à rotina fiscal."],
+    role: "Karine analisa documentos e dados fiscais, verifica apurações e procedimentos, aponta pontos de atenção e apresenta informações técnicas que apoiam a empresa na definição das providências adequadas.",
+    note: "A auditoria é realizada conforme o escopo contratado e os documentos disponibilizados. A identificação de um risco não significa, por si só, que exista infração ou débito."
   },
-  civil: {
-    title: "Direito Civil",
-    intro: "Atuação em questões que envolvem direitos e obrigações nas relações entre pessoas, contratos e responsabilidades.",
-    details: ["Análise e orientação em contratos e obrigações.", "Questões relacionadas à responsabilidade civil e reparação de danos.", "Orientação em conflitos e relações jurídicas de natureza civil."],
-    note: "O encaminhamento adequado depende da natureza do conflito e das provas disponíveis."
+  "planejamento-fiscal": {
+    title: "Planejamento fiscal",
+    intro: "Planejar a tributação é compreender como os impostos afetam a atividade, os custos e as decisões da empresa, considerando as alternativas permitidas pela legislação.",
+    importance: "A carga tributária influencia preços, margens, investimentos e fluxo de caixa. Um planejamento bem fundamentado permite antecipar impactos, comparar cenários e evitar decisões tomadas sem conhecer suas consequências fiscais.",
+    benefits: ["Entender como os tributos influenciam custos e resultados.", "Avaliar cenários e alternativas legais de tributação.", "Antecipar impactos de mudanças na operação ou na legislação.", "Apoiar decisões com mais informação, organização e previsibilidade."],
+    role: "Karine estuda as informações contábeis e fiscais do negócio, avalia os efeitos tributários das alternativas possíveis e apresenta análises para apoiar a tomada de decisão do empresário.",
+    note: "O planejamento deve refletir a atividade e a realidade de cada empresa. Não significa eliminar tributos nem garante uma economia predeterminada."
   },
-  mediacao: {
-    title: "Mediação",
-    intro: "A mediação busca facilitar o diálogo entre as partes para que possam construir, de forma voluntária, uma solução para o conflito.",
-    details: ["Identificação dos pontos de divergência e dos interesses envolvidos.", "Apoio à comunicação respeitosa e à construção de alternativas.", "Formalização de entendimentos, quando houver consenso e cabimento."],
-    note: "A mediação depende da participação voluntária e da adequação do conflito a esse método."
+  "imposto-de-renda": {
+    title: "Declaração de Imposto de Renda",
+    intro: "Preparação de declarações de Imposto de Renda para pessoas físicas e empresas, com atenção aos documentos, às informações prestadas e às regras aplicáveis.",
+    importance: "Uma declaração correta e entregue no prazo ajuda a cumprir as obrigações fiscais, reduz o risco de inconsistências e evita transtornos decorrentes de informações incompletas ou divergentes.",
+    benefits: ["Organizar documentos e informações necessários à declaração.", "Conferir rendimentos, despesas, bens e demais dados pertinentes ao caso.", "Preparar a declaração conforme as regras e os prazos aplicáveis.", "Orientar sobre pendências e informações que precisam de atenção."],
+    role: "Karine reúne e analisa a documentação fornecida, verifica a consistência das informações e prepara a declaração de acordo com a situação do contribuinte e as normas vigentes.",
+    note: "O tratamento de cada declaração depende do perfil do contribuinte e da documentação apresentada. A responsabilidade pela veracidade das informações de origem permanece com quem as fornece."
   },
-  seguros: {
-    title: "Seguros",
-    intro: "Orientação em questões relacionadas a contratos de seguro, coberturas, negativas e sinistros.",
-    details: ["Análise das condições da apólice e das coberturas contratadas.", "Orientação diante de dúvidas ou divergências sobre indenizações.", "Avaliação de documentos e comunicações da seguradora."],
-    note: "A cobertura depende das condições contratadas, dos fatos e das regras aplicáveis."
+  "consultoria-tributaria": {
+    title: "Consultoria tributária",
+    intro: "A consultoria tributária aproxima a análise técnica da realidade da empresa. O objetivo é ajudar o empresário a compreender suas obrigações e os efeitos dos tributos sobre a operação.",
+    importance: "Quando o empresário entende melhor suas obrigações e os impactos fiscais das decisões, consegue planejar com mais clareza, reduzir incertezas e concentrar esforços na gestão do negócio.",
+    benefits: ["Esclarecer dúvidas sobre rotinas e obrigações tributárias.", "Compreender os impactos fiscais de operações e decisões empresariais.", "Identificar pontos que merecem revisão ou acompanhamento.", "Apoiar uma gestão mais organizada e consciente dos riscos."],
+    role: "Karine interpreta as informações contábeis e fiscais apresentadas, analisa a questão à luz das regras aplicáveis e oferece orientação técnica dentro de sua atuação profissional.",
+    note: "A orientação depende das informações e documentos fornecidos e não substitui análises específicas de outras áreas profissionais quando necessárias."
   },
-  compliance: {
-    title: "Compliance",
-    intro: "Apoio à organização de práticas de integridade e prevenção de riscos jurídicos nas atividades de organizações.",
-    details: ["Levantamento inicial de riscos e procedimentos internos.", "Orientação para políticas, regras e controles compatíveis com a organização.", "Apoio à disseminação de práticas éticas e canais de orientação."],
-    note: "As medidas precisam ser adequadas ao porte, à atividade e à realidade de cada organização."
-  },
-  esportivo: {
-    title: "Direito Esportivo",
-    intro: "Orientação jurídica em relações e questões ligadas ao ambiente esportivo, seus profissionais e organizações.",
-    details: ["Análise de contratos e relações no contexto esportivo.", "Orientação em questões institucionais e negociais relacionadas ao esporte.", "Avaliação de conflitos e documentos ligados à atividade esportiva."],
-    note: "A análise considera as regras aplicáveis à modalidade, à entidade e à relação envolvida."
-  },
-  empresarial: {
-    title: "Direito Empresarial",
-    intro: "Suporte jurídico para empresas em questões contratuais, organização das relações comerciais e decisões do negócio.",
-    details: ["Orientação na elaboração e análise de contratos empresariais.", "Apoio jurídico em relações entre sócios, fornecedores e parceiros.", "Análise preventiva de riscos jurídicos ligados à atividade empresarial."],
-    note: "A orientação deve considerar a estrutura, a atividade e os objetivos de cada empresa."
+  "reforma-tributaria": {
+    title: "Reforma Tributária",
+    intro: "A Reforma Tributária altera gradualmente a tributação sobre o consumo. Empresas de diferentes setores precisarão avaliar como as mudanças podem afetar preços, contratos, sistemas, créditos e processos.",
+    importance: "Mesmo antes da transição completa, acompanhar as mudanças permite que a empresa se prepare, identifique áreas impactadas e evite ser surpreendida por ajustes em suas rotinas e decisões.",
+    benefits: ["Mapear operações e processos que podem ser afetados.", "Avaliar possíveis reflexos sobre custos, preços, créditos e contratos.", "Identificar necessidades de adaptação em sistemas e documentos fiscais.", "Acompanhar as etapas de transição e planejar ajustes com antecedência."],
+    role: "Karine acompanha as mudanças tributárias, analisa seus possíveis reflexos sobre as informações e operações da empresa e ajuda a organizar os pontos que merecem atenção e preparação.",
+    note: "Os impactos variam conforme atividade, regime tributário, operações e regulamentação aplicável. As análises devem ser atualizadas à medida que as regras forem detalhadas."
   }
 };
 
@@ -61,7 +61,7 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const service = services[slug];
 
   if (!service) {
-    return <main className="service-page"><p>Esta área não foi encontrada.</p><Link className="service-back" href="/">Voltar ao início</Link></main>;
+    return <main className="service-page"><p>Esta área não foi encontrada.</p><Link className="service-back" href="/#atuacao">Voltar às áreas de atuação</Link></main>;
   }
 
   return (
@@ -71,18 +71,22 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
         <Link className="service-back" href="/#atuacao"><ArrowLeft size={16}/> Todas as áreas</Link>
       </header>
       <section className="service-hero">
-        <span className="service-eyebrow">ÁREAS DE ATUAÇÃO · KARINE KLUPPELL</span>
+        <span className="service-eyebrow">CONTABILIDADE E CONSULTORIA TRIBUTÁRIA · KARINE KLUPPELL</span>
         <h1>{service.title}</h1>
         <p>{service.intro}</p>
       </section>
       <section className="service-content">
-        <span className="service-kicker">COMO PODEMOS ORIENTAR</span>
-        <h2>Uma análise cuidadosa para cada situação.</h2>
-        <ul>{service.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
+        <span className="service-kicker">POR QUE ISSO É IMPORTANTE PARA SUA EMPRESA</span>
+        <h2>Tributação bem acompanhada também é gestão do negócio.</h2>
+        <p className="service-explanation">{service.importance}</p>
+        <h2>O que esse trabalho pode agregar</h2>
+        <ul>{service.benefits.map((benefit) => <li key={benefit}>{benefit}</li>)}</ul>
+        <h2>Qual é o papel da Karine</h2>
+        <p className="service-explanation">{service.role}</p>
         <p className="service-note">{service.note}</p>
-        <Link className="service-contact" href="/#contato">Solicitar atendimento <ArrowUpRight size={17}/></Link>
+        <Link className="service-contact" href="/#contato">Conversar sobre esse serviço <ArrowUpRight size={17}/></Link>
       </section>
-      <footer className="service-footer"><Link href="/">KARINE KLUPPELL · ADVOCACIA & CONSULTORIA</Link><span>© {new Date().getFullYear()} — Todos os direitos reservados.</span></footer>
+      <footer className="service-footer"><Link href="/">KARINE KLUPPELL · CONTABILIDADE & CONSULTORIA TRIBUTÁRIA</Link><span>© {new Date().getFullYear()} — Todos os direitos reservados.</span></footer>
     </main>
   );
 }
