@@ -28,3 +28,13 @@
 .service-contact:hover{background:#d8e6dc;color:#203d34}
 .service-footer{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;padding:30px 8%;background:#1b352d;font-size:10px;letter-spacing:.08em;color:#d0ddd4}
 @media(max-width:650px){.service-header{height:74px;padding:0 6%}.service-brand{font-size:15px}.service-back{font-size:10px}.service-hero{padding:86px 7% 70px}.service-hero>p{font-size:15px}.service-content{padding:70px 7% 90px}.service-content li{font-size:14px;padding:18px 14px}.service-footer{padding:26px 7%}}
+
+
+/* Retrato profissional de Karine */
+.hero-image{background:linear-gradient(90deg,#172521f2 0%,#172521d9 43%,#17252180 100%),linear-gradient(0deg,#17252155,transparent 55%)}
+.hero-portrait{position:absolute;z-index:0;right:9%;top:9%;height:82%;width:min(34vw,440px);overflow:hidden;box-shadow:0 24px 70px #07130f66;border:1px solid #d5c5a455}
+.hero-portrait img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 28%;filter:grayscale(1)}
+.profile-photo{overflow:hidden}
+.profile-photo img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 25%;filter:grayscale(1)}
+@media(max-width:850px){.hero-portrait{right:0;top:20%;height:72%;width:52%;opacity:.55}.hero-content{max-width:68%;z-index:2}.hero-image{background:linear-gradient(90deg,#172521f5 0%,#172521d9 48%,#17252180 100%)}} 
+@media(max-width:520px){.hero-portrait{right:-8%;top:27%;height:62%;width:65%;opacity:.35}.hero-content{max-width:88%}}
