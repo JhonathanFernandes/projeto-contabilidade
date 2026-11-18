@@ -40,8 +40,8 @@ export default function Home() {
     <main>
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Página inicial">
-          <span className="brand-mark">M<span>.</span></span>
-          <span className="brand-name">MENEGHETTI<small>CONTABILIDADE & ADVOCACIA</small></span>
+          <span className="brand-mark">K<span>.</span></span>
+          <span className="brand-name">KARINE KLUPPELL<small>CONTABILIDADE & ADVOCACIA</small></span>
         </a>
         <nav className={`desktop-nav${menuOpen ? " nav-open" : ""}`}>
           <a href="#sobre" onClick={() => setMenuOpen(false)}>A profissional</a><a href="#atuacao" onClick={() => setMenuOpen(false)}>Atuação</a><a href="#metodo" onClick={() => setMenuOpen(false)}>Nosso olhar</a><a href="#contato" onClick={() => setMenuOpen(false)}>Contato</a>
@@ -126,7 +126,7 @@ export default function Home() {
       </section>
 
       <footer className="footer">
-        <a className="brand brand-footer" href="#inicio"><span className="brand-mark">M<span>.</span></span><span className="brand-name">MENEGHETTI<small>CONTABILIDADE & ADVOCACIA</small></span></a>
+        <a className="brand brand-footer" href="#inicio"><span className="brand-mark">K<span>.</span></span><span className="brand-name">KARINE KLUPPELL<small>CONTABILIDADE & ADVOCACIA</small></span></a>
         <span>© {new Date().getFullYear()} — Todos os direitos reservados.</span>
         <div className="socials"><a href="#" aria-label="Instagram"><Instagram size={17}/></a><a href="#" aria-label="LinkedIn"><Linkedin size={17}/></a></div>
       </footer>
