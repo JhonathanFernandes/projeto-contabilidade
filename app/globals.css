@@ -300,8 +300,8 @@ html,body{background:var(--cream);color:var(--ink)}
 
 /* Revelação progressiva das seções conforme a rolagem */
 @media(prefers-reduced-motion:no-preference){
-  .scroll-reveal{opacity:0;transform:translate3d(0,42px,0) scale(var(--scroll-scale,1));clip-path:inset(5% 0 0 0);transition:opacity .85s ease,transform .12s linear,clip-path .95s cubic-bezier(.2,.7,.2,1);}
-  .scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0) scale(var(--scroll-scale,1));clip-path:inset(0 0 0 0);}
+  .scroll-reveal{opacity:0;transform:translate3d(0,42px,0);clip-path:inset(5% 0 0 0);transition:opacity .85s ease,transform .85s cubic-bezier(.2,.7,.2,1),clip-path .95s cubic-bezier(.2,.7,.2,1);}
+  .scroll-reveal.is-visible{opacity:1;transform:translate3d(0,0,0);clip-path:inset(0 0 0 0);}
   .scroll-reveal .section-heading,.scroll-reveal .intro-grid,.scroll-reveal .tax-grid,.scroll-reveal .timeline,.scroll-reveal .career-list,.scroll-reveal .education-list,.scroll-reveal .contact-grid{transition:opacity .7s ease,transform .7s ease;}
   .scroll-reveal:not(.is-visible) .section-heading,.scroll-reveal:not(.is-visible) .intro-grid,.scroll-reveal:not(.is-visible) .tax-grid,.scroll-reveal:not(.is-visible) .timeline,.scroll-reveal:not(.is-visible) .career-list,.scroll-reveal:not(.is-visible) .education-list,.scroll-reveal:not(.is-visible) .contact-grid{opacity:0;transform:translateY(18px);}
 }
