@@ -81,10 +81,15 @@ export default function Home() {
           <p>Precisão nos detalhes.<br/><em>Estratégia no conjunto.</em></p>
         </div>
         <div className="area-list">
-          {areas.map((area) => <article className="area-item" key={area.number}>
-            <span className="area-number">{area.number}</span><area.icon className="area-icon" strokeWidth={1.2}/>
-            <div><h3>{area.title}</h3><p>{area.text}</p></div><ArrowUpRight className="area-arrow"/>
-          </article>)}
+          {areas.map((area) => {
+            const Icon = area.icon;
+            return (
+              <article className="area-item" key={area.number}>
+                <span className="area-number">{area.number}</span><Icon className="area-icon" strokeWidth={1.2}/>
+                <div><h3>{area.title}</h3><p>{area.text}</p></div><ArrowUpRight className="area-arrow"/>
+              </article>
+            );
+          })}
         </div>
       </section>
 
