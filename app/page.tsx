@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { ArrowDown, ArrowUpRight, Scale, Calculator, ShieldCheck, Menu, X, Instagram, Linkedin, Mail, Phone } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { ArrowDown, ArrowUpRight, Scale, Calculator, ShieldCheck, Menu, Instagram, Linkedin, Mail, Phone } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -15,8 +15,8 @@ const areas = [
 ];
 
 export default function Home() {
-  const heroRef = useRef<HTMLElement>(null);
-  const revealRef = useRef<HTMLDivElement>(null);
+  const heroRef = useRef<HTMLElement | null>(null);
+  const revealRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
   const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
 
@@ -34,7 +34,7 @@ export default function Home() {
     return () => ctx.revert();
   }, []);
 
-  const [menuOpen, setMenuOpen] = [false, () => {}] as const;
+  const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <main>
@@ -43,11 +43,11 @@ export default function Home() {
           <span className="brand-mark">M<span>.</span></span>
           <span className="brand-name">MENEGHETTI<small>CONTABILIDADE & ADVOCACIA</small></span>
         </a>
-        <nav className="desktop-nav">
-          <a href="#sobre">A profissional</a><a href="#atuacao">Atuação</a><a href="#metodo">Nosso olhar</a><a href="#contato">Contato</a>
+        <nav className={`desktop-nav${menuOpen ? " nav-open" : ""}`}>
+          <a href="#sobre" onClick={() => setMenuOpen(false)}>A profissional</a><a href="#atuacao" onClick={() => setMenuOpen(false)}>Atuação</a><a href="#metodo" onClick={() => setMenuOpen(false)}>Nosso olhar</a><a href="#contato" onClick={() => setMenuOpen(false)}>Contato</a>
         </nav>
         <a className="header-cta" href="#contato">Vamos conversar <ArrowUpRight size={15}/></a>
-        <button className="mobile-menu" aria-label="Abrir menu" onClick={() => document.querySelector(".desktop-nav")?.classList.toggle("nav-open")}><Menu/></button>
+        <button className="mobile-menu" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}><Menu/></button>
       </header>
 
       <section className="hero" id="inicio" ref={heroRef}>
