@@ -116,3 +116,18 @@
   .hero-copy{font-size:14px;line-height:1.75;margin:22px auto 16px}
   .hero-index{bottom:22px}
 }
+
+
+/* Ajustes finais do retrato: proporção original e sem sombra/faixa inferior */
+.hero-portrait{
+  aspect-ratio:1231 / 1278;
+  background:transparent;
+  box-shadow:none;
+}
+.hero-portrait img{
+  object-fit:cover;
+  background:transparent;
+}
+@media(max-width:850px){
+  .hero-index{display:none}
+}
