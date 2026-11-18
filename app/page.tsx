@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 import {
   ArrowDown, ArrowUpRight, Scale, BriefcaseBusiness, HeartHandshake,
   ShieldCheck, Menu, Instagram, Linkedin, Landmark, FileText, Trophy,
@@ -95,10 +96,10 @@ export default function Home() {
           {areas.map((area) => {
             const Icon = area.icon;
             return (
-              <article className="area-item" key={area.number}>
+              <Link className="area-item area-card-link" href={`/atuacao/${["trabalhista","previdenciario","civil","mediacao","seguros","compliance","esportivo","empresarial"][Number(area.number)-1]}/`} key={area.number} aria-label={`Saiba mais sobre ${area.title}`}>
                 <span className="area-number">{area.number}</span><Icon className="area-icon" strokeWidth={1.2}/>
                 <div><h3>{area.title}</h3><p>{area.text}</p></div><ArrowUpRight className="area-arrow"/>
-              </article>
+              </Link>
             );
           })}
         </div>
