@@ -1,7 +1,4 @@
-"use client";
-
 import Link from "next/link";
-import { useParams } from "next/navigation";
 import { ArrowLeft, ArrowUpRight } from "lucide-react";
 
 const services: Record<string, { title: string; intro: string; details: string[]; note: string }> = {
@@ -55,9 +52,13 @@ const services: Record<string, { title: string; intro: string; details: string[]
   }
 };
 
-export default function ServicePage() {
-  const params = useParams<{ slug: string }>();
-  const service = services[params.slug];
+export function generateStaticParams() {
+  return Object.keys(services).map((slug) => ({ slug }));
+}
+
+export default async function ServicePage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
+  const service = services[slug];
 
   if (!service) {
     return <main className="service-page"><p>Esta área não foi encontrada.</p><Link className="service-back" href="/">Voltar ao início</Link></main>;
