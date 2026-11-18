@@ -63,12 +63,10 @@ export default function Home() {
       </header>
 
       <section className="hero" id="inicio" ref={heroRef}>
-        <motion.div className="hero-image" style={{ y: imageY }} />
-        <motion.div className="hero-portrait" initial={{ opacity: 0, x: 35 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: .45, duration: 1 }}><img src="/projeto-contabilidade/karine-kluppell.jpg" alt="Retrato em preto e branco de Karine Kluppell" /></motion.div>
-        <div className="hero-shade" />
         <div className="hero-content">
           <motion.p className="eyebrow" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .2 }}>ÉTICA • ESTRATÉGIA • CONFIANÇA</motion.p>
           <motion.h1 initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .35, duration: .9 }}>Segurança para<br/><em>seguir em frente.</em></motion.h1>
+          <motion.div className="hero-portrait" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .45, duration: 1 }}><img src="/projeto-contabilidade/karine-kluppell.jpg" alt="Retrato em preto e branco de Karine Kluppell" /></motion.div>
           <motion.p className="hero-copy" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .8 }}>Atuação jurídica próxima e estratégica, com atenção às pessoas, às relações e aos negócios.</motion.p>
           <motion.a className="hero-link" href="#sobre" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>Conheça nossa atuação <ArrowDown size={16}/></motion.a>
         </div>
