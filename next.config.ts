@@ -1,7 +1,12 @@
 import type { NextConfig } from 'next';
 
+const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+
 const nextConfig: NextConfig = {
-  images: { remotePatterns: [] },
+  output: 'export',
+  trailingSlash: true,
+  basePath: isGitHubPages ? '/projeto-contabilidade' : '',
+  images: { unoptimized: true },
 };
 
 export default nextConfig;
