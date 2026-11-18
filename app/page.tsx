@@ -2,12 +2,12 @@
 import { useState } from "react";
 import { ArrowDown, ArrowUpRight, Menu, Calculator, FileText, SearchCheck, ReceiptText, Building2, ClipboardCheck, GraduationCap, BriefcaseBusiness } from "lucide-react";
 const topics = [
-{icon:Calculator,title:"Auditoria tributária",text:"Análise de apurações, documentos e procedimentos fiscais para identificar oportunidades e pontos de atenção."},
-{icon:SearchCheck,title:"Recuperação de créditos",text:"Avaliação técnica de créditos tributários e oportunidades de recuperação, conforme a legislação aplicável."},
-{icon:ClipboardCheck,title:"Planejamento fiscal",text:"Leitura estratégica dos impactos tributários para apoiar decisões e a organização das empresas."},
-{icon:ReceiptText,title:"SPED e obrigações fiscais",text:"Atenção à escrituração digital, consistência das informações e cumprimento das obrigações acessórias."},
-{icon:Building2,title:"Impactos da Reforma",text:"Preparação para as mudanças na tributação sobre o consumo e análise dos reflexos na operação empresarial."},
-{icon:FileText,title:"Consultoria tributária",text:"Acompanhamento de questões fiscais com análise técnica e visão conectada à realidade do negócio."}
+{icon:SearchCheck,title:"Recuperação de créditos tributários",text:"Análise de oportunidades de recuperação de créditos, com avaliação técnica e observância da legislação aplicável."},
+{icon:Calculator,title:"Auditoria tributária",text:"Revisão de apurações e informações fiscais para identificar inconsistências, riscos e oportunidades."},
+{icon:ClipboardCheck,title:"Planejamento fiscal",text:"Análise dos efeitos tributários para apoiar decisões empresariais e um planejamento mais seguro."},
+{icon:FileText,title:"Declaração de Imposto de Renda",text:"Preparação de declarações de Imposto de Renda para pessoas físicas e empresas, conforme a documentação e as regras aplicáveis."},
+{icon:ReceiptText,title:"SPED e obrigações fiscais",text:"Atenção à escrituração digital, à consistência das informações e ao cumprimento das obrigações acessórias."},
+{icon:Building2,title:"Reforma Tributária",text:"Análise das mudanças na tributação sobre o consumo e dos possíveis reflexos na operação das empresas."}
 ];
 const timeline=[
 {year:"2026",title:"Ano de testes",text:"Início da fase de teste da CBS (0,9%) e do IBS (0,1%), com regras de compensação e obrigações acessórias próprias."},
