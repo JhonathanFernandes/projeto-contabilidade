@@ -6,7 +6,7 @@ const topics = [
 {icon:Calculator,title:"Auditoria tributária",text:"Revisão de apurações e informações fiscais para identificar inconsistências, riscos e oportunidades."},
 {icon:ClipboardCheck,title:"Planejamento fiscal",text:"Análise dos efeitos tributários para apoiar decisões empresariais e um planejamento mais seguro."},
 {icon:FileText,title:"Declaração de Imposto de Renda",text:"Preparação de declarações de Imposto de Renda para pessoas físicas e empresas, conforme a documentação e as regras aplicáveis."},
-{icon:ReceiptText,title:"SPED e obrigações fiscais",text:"Atenção à escrituração digital, à consistência das informações e ao cumprimento das obrigações acessórias."},
+{icon:FileText,title:"Consultoria tributária",text:"Orientação técnica em questões tributárias, com análise conectada à realidade e às necessidades de cada negócio."},
 {icon:Building2,title:"Reforma Tributária",text:"Análise das mudanças na tributação sobre o consumo e dos possíveis reflexos na operação das empresas."}
 ];
 const timeline=[
