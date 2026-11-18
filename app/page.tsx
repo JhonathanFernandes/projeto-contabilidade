@@ -66,7 +66,7 @@ export default function Home() {
         <div className="hero-content">
           <motion.p className="eyebrow" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .2 }}>ÉTICA • ESTRATÉGIA • CONFIANÇA</motion.p>
           <motion.h1 initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .35, duration: .9 }}>Segurança para<br/><em>seguir em frente.</em></motion.h1>
-          <motion.div className="hero-portrait" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .45, duration: 1 }}><img src="/projeto-contabilidade/karine-kluppell.jpg" alt="Retrato em preto e branco de Karine Kluppell" /></motion.div>
+          <motion.div className="hero-portrait" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .45, duration: 1 }}><img src="/projeto-contabilidade/file_00000000c0a8820ea316f43b818a04cc.png" alt="Retrato em preto e branco de Karine Kluppell" /></motion.div>
           <motion.p className="hero-copy" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .8 }}>Atuação jurídica próxima e estratégica, com atenção às pessoas, às relações e aos negócios.</motion.p>
           <motion.a className="hero-link" href="#sobre" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>Conheça nossa atuação <ArrowDown size={16}/></motion.a>
         </div>
@@ -114,7 +114,7 @@ export default function Home() {
       </section>
 
       <section className="profile section-pad">
-        <div className="profile-photo"><img src="/projeto-contabilidade/karine-kluppell.jpg" alt="Retrato em preto e branco de Karine Kluppell" /></div>
+        <div className="profile-photo"><img src="/projeto-contabilidade/file_00000000c0a8820ea316f43b818a04cc.png" alt="Retrato em preto e branco de Karine Kluppell" /></div>
         <div className="profile-copy">
           <span className="small-rule"/> CONHEÇA A PROFISSIONAL
           <h2>Karine<br/><em>Kluppell.</em></h2>
