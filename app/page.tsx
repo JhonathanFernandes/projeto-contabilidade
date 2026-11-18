@@ -64,6 +64,7 @@ export default function Home() {
 
       <section className="hero" id="inicio" ref={heroRef}>
         <motion.div className="hero-image" style={{ y: imageY }} />
+        <motion.div className="hero-portrait" initial={{ opacity: 0, x: 35 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: .45, duration: 1 }}><img src="/projeto-contabilidade/karine-kluppell.jpg" alt="Retrato em preto e branco de Karine Kluppell" /></motion.div>
         <div className="hero-shade" />
         <div className="hero-content">
           <motion.p className="eyebrow" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .2 }}>ÉTICA • ESTRATÉGIA • CONFIANÇA</motion.p>
@@ -115,7 +116,7 @@ export default function Home() {
       </section>
 
       <section className="profile section-pad">
-        <div className="profile-photo"><div className="photo-placeholder"><span>RETRATO PROFISSIONAL</span><small>Imagem será inserida nesta área</small></div></div>
+        <div className="profile-photo"><img src="/projeto-contabilidade/karine-kluppell.jpg" alt="Retrato em preto e branco de Karine Kluppell" /></div>
         <div className="profile-copy">
           <span className="small-rule"/> CONHEÇA A PROFISSIONAL
           <h2>Karine<br/><em>Kluppell.</em></h2>
