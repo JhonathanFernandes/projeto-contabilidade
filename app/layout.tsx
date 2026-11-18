@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Karine Kluppell | Contabilidade e Consultoria Tributária",
+  title: "Karine Kluppell",
   description:
     "Contabilidade, auditoria e consultoria tributária, com atuação em recuperação de créditos e planejamento fiscal.",
 };
