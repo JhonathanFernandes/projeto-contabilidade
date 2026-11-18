@@ -1,145 +1,45 @@
 "use client";
-
-import { useEffect, useRef, useState } from "react";
-import Link from "next/link";
-import {
-  ArrowDown, ArrowUpRight, Scale, BriefcaseBusiness, HeartHandshake,
-  ShieldCheck, Menu, Instagram, Linkedin, Landmark, FileText, Trophy,
-  Building2, Handshake
-} from "lucide-react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
-
-const areas = [
-  { number: "01", icon: BriefcaseBusiness, title: "Direito Trabalhista", text: "Orientação e atuação em questões relacionadas às relações de trabalho e aos direitos de empregados e empregadores." },
-  { number: "02", icon: Landmark, title: "Direito Previdenciário", text: "Acompanhamento de demandas previdenciárias e orientação sobre benefícios e direitos." },
-  { number: "03", icon: Scale, title: "Direito Civil", text: "Atuação em questões cíveis, contratos, responsabilidades e relações entre pessoas." },
-  { number: "04", icon: Handshake, title: "Mediação", text: "Construção de soluções consensuais por meio do diálogo e da busca por acordos." },
-  { number: "05", icon: ShieldCheck, title: "Seguros", text: "Orientação em questões relacionadas a contratos de seguro, coberturas e sinistros." },
-  { number: "06", icon: FileText, title: "Compliance", text: "Apoio à integridade, à prevenção de riscos e à adoção de boas práticas." },
-  { number: "07", icon: Trophy, title: "Direito Esportivo", text: "Orientação jurídica em relações e questões ligadas ao ambiente esportivo." },
-  { number: "08", icon: Building2, title: "Direito Empresarial", text: "Suporte jurídico para empresas, contratos, organização e decisões do negócio." },
+import { useState } from "react";
+import { ArrowDown, ArrowUpRight, Menu, Calculator, FileText, SearchCheck, ReceiptText, Building2, ClipboardCheck, GraduationCap, BriefcaseBusiness } from "lucide-react";
+const topics = [
+{icon:Calculator,title:"Auditoria tributária",text:"Análise de apurações, documentos e procedimentos fiscais para identificar oportunidades e pontos de atenção."},
+{icon:SearchCheck,title:"Recuperação de créditos",text:"Avaliação técnica de créditos tributários e oportunidades de recuperação, conforme a legislação aplicável."},
+{icon:ClipboardCheck,title:"Planejamento fiscal",text:"Leitura estratégica dos impactos tributários para apoiar decisões e a organização das empresas."},
+{icon:ReceiptText,title:"SPED e obrigações fiscais",text:"Atenção à escrituração digital, consistência das informações e cumprimento das obrigações acessórias."},
+{icon:Building2,title:"Impactos da Reforma",text:"Preparação para as mudanças na tributação sobre o consumo e análise dos reflexos na operação empresarial."},
+{icon:FileText,title:"Consultoria tributária",text:"Acompanhamento de questões fiscais com análise técnica e visão conectada à realidade do negócio."}
 ];
-
-export default function Home() {
-  const heroRef = useRef<HTMLElement | null>(null);
-  const revealRef = useRef<HTMLDivElement | null>(null);
-  const { scrollYProgress } = useScroll({ target: heroRef, offset: ["start start", "end start"] });
-  const imageY = useTransform(scrollYProgress, [0, 1], ["0%", "22%"]);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      gsap.from(".reveal", {
-        y: 42, opacity: 0, duration: 1, stagger: 0.14, ease: "power3.out",
-        scrollTrigger: { trigger: revealRef.current, start: "top 78%" }
-      });
-      gsap.utils.toArray<HTMLElement>(".line-reveal").forEach((el) => {
-        gsap.from(el, { scaleX: 0, transformOrigin: "left", duration: 1.1, ease: "power3.inOut",
-          scrollTrigger: { trigger: el, start: "top 88%" } });
-      });
-    });
-    return () => ctx.revert();
-  }, []);
-
-  return (
-    <main>
-      <header className="site-header">
-        <a className="brand" href="#inicio" aria-label="Página inicial">
-          <span className="brand-mark">K<span>.</span></span>
-          <span className="brand-name">KARINE KLUPPELL<small>ADVOCACIA & CONSULTORIA</small></span>
-        </a>
-        <nav className={`desktop-nav${menuOpen ? " nav-open" : ""}`}>
-          <a href="#sobre" onClick={() => setMenuOpen(false)}>A profissional</a>
-          <a href="#atuacao" onClick={() => setMenuOpen(false)}>Áreas de atuação</a>
-          <a href="#metodo" onClick={() => setMenuOpen(false)}>Nosso compromisso</a>
-          <a href="#contato" onClick={() => setMenuOpen(false)}>Contato</a>
-        </nav>
-        <a className="header-cta" href="#contato">Vamos conversar <ArrowUpRight size={15}/></a>
-        <button className="mobile-menu" aria-label={menuOpen ? "Fechar menu" : "Abrir menu"} aria-expanded={menuOpen} onClick={() => setMenuOpen((open) => !open)}><Menu/></button>
-      </header>
-
-      <section className="hero" id="inicio" ref={heroRef}>
-        <div className="hero-content">
-          <motion.p className="eyebrow" initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .2 }}>ÉTICA • ESTRATÉGIA • CONFIANÇA</motion.p>
-          <motion.h1 initial={{ opacity: 0, y: 28 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .35, duration: .9 }}>Segurança para<br/><em>seguir em frente.</em></motion.h1>
-          <motion.div className="hero-portrait" initial={{ opacity: 0, y: 24 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .45, duration: 1 }}><img src="/projeto-contabilidade/file_00000000c0a8820ea316f43b818a04cc.png" alt="Retrato em preto e branco de Karine Kluppell" /></motion.div>
-          <motion.p className="hero-copy" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: .8 }}>Atuação jurídica próxima e estratégica, com atenção às pessoas, às relações e aos negócios.</motion.p>
-          <motion.a className="hero-link" href="#sobre" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 1 }}>Conheça nossa atuação <ArrowDown size={16}/></motion.a>
-        </div>
-        <div className="hero-index"><span>01</span><i/> ATUAÇÃO PERSONALIZADA</div>
-        <div className="hero-side-note">ATENDIMENTO COM RESPONSABILIDADE</div>
-      </section>
-
-      <section className="intro section-pad" id="sobre" ref={revealRef}>
-        <div className="intro-kicker reveal"><span className="small-rule"/> CONHECIMENTO E PROXIMIDADE</div>
-        <div className="intro-grid">
-          <h2 className="reveal">Orientação clara.<br/><em>Atuação responsável.</em></h2>
-          <div className="intro-text reveal">
-            <p>Cada situação merece ser compreendida em seu contexto. O trabalho jurídico começa pela escuta, passa por uma análise cuidadosa e busca caminhos adequados para cada necessidade.</p>
-            <p>O compromisso é oferecer atendimento transparente, estratégico e atento aos objetivos de cada pessoa ou negócio.</p>
-            <a className="text-link" href="#atuacao">Conheça as áreas de atuação <ArrowUpRight size={17}/></a>
-          </div>
-        </div>
-      </section>
-
-      <section className="areas section-pad" id="atuacao">
-        <div className="section-heading">
-          <div><span className="small-rule"/> ÁREAS DE ATUAÇÃO</div>
-          <p>Direito com atenção<br/><em>a cada contexto.</em></p>
-        </div>
-        <div className="area-list">
-          {areas.map((area) => {
-            const Icon = area.icon;
-            return (
-              <Link className="area-item area-card-link" href={`/atuacao/${["trabalhista","previdenciario","civil","mediacao","seguros","compliance","esportivo","empresarial"][Number(area.number)-1]}/`} key={area.number} aria-label={`Saiba mais sobre ${area.title}`}>
-                <span className="area-number">{area.number}</span><Icon className="area-icon" strokeWidth={1.2}/>
-                <div><h3>{area.title}</h3><p>{area.text}</p></div><ArrowUpRight className="area-arrow"/>
-              </Link>
-            );
-          })}
-        </div>
-      </section>
-
-      <section className="statement" id="metodo">
-        <div className="statement-bg"/>
-        <div className="statement-content">
-          <span className="small-rule"/> NOSSO COMPROMISSO
-          <h2>Escuta atenta.<br/><em>Decisões bem orientadas.</em></h2>
-          <p>Ética, transparência e responsabilidade em cada etapa do atendimento.</p>
-        </div>
-      </section>
-
-      <section className="profile section-pad">
-        <div className="profile-photo"><img src="/projeto-contabilidade/file_00000000c0a8820ea316f43b818a04cc.png" alt="Retrato em preto e branco de Karine Kluppell" /></div>
-        <div className="profile-copy">
-          <span className="small-rule"/> CONHEÇA A PROFISSIONAL
-          <h2>Karine<br/><em>Kluppell.</em></h2>
-          <p>Este espaço será dedicado à apresentação profissional, formação, trajetória e informações de registro, com conteúdo confirmado pela própria profissional.</p>
-          <a className="text-link" href="#contato">Entre em contato <ArrowUpRight size={17}/></a>
-        </div>
-      </section>
-
-      <section className="contact section-pad" id="contato">
-        <div className="contact-top"><span className="small-rule"/> CONTATO</div>
-        <div className="contact-grid">
-          <h2>Vamos conversar<br/><em>sobre sua necessidade?</em></h2>
-          <div className="contact-details">
-            <p>Entre em contato para apresentar sua situação e conhecer as possibilidades de atendimento.</p>
-            <p>Telefone, WhatsApp, e-mail e endereço serão incluídos assim que os dados oficiais forem confirmados.</p>
-            <a className="text-link" href="#inicio">Voltar ao início <ArrowUpRight size={17}/></a>
-          </div>
-        </div>
-      </section>
-
-      <footer className="footer">
-        <a className="brand brand-footer" href="#inicio"><span className="brand-mark">K<span>.</span></span><span className="brand-name">KARINE KLUPPELL<small>ADVOCACIA & CONSULTORIA</small></span></a>
-        <span>© {new Date().getFullYear()} — Todos os direitos reservados.</span>
-        <div className="socials"><a href="#contato" aria-label="Instagram"><Instagram size={17}/></a><a href="#contato" aria-label="LinkedIn"><Linkedin size={17}/></a></div>
-      </footer>
-    </main>
-  );
+const timeline=[
+{year:"2026",title:"Ano de testes",text:"Início da fase de teste da CBS (0,9%) e do IBS (0,1%), com regras de compensação e obrigações acessórias próprias."},
+{year:"2027–2028",title:"Entrada da CBS",text:"Início da CBS, extinção do PIS e da Cofins e instituição do Imposto Seletivo. O IBS permanece com alíquota de 0,1% nessa etapa."},
+{year:"2029–2032",title:"Transição de ICMS e ISS",text:"Redução gradual de ICMS e ISS e aumento progressivo da participação do IBS."},
+{year:"2033",title:"Novo modelo integral",text:"Previsão de vigência integral do novo modelo, com extinção de ICMS e ISS."}
+];
+const experience=[
+{role:"Contadora",company:"Kluppell Assessoria Empresarial",period:"Abril de 2023 – atual",detail:"Contabilidade e consultoria tributária",place:"Curitiba · Remoto"},
+{role:"Contadora",company:"Valor Tributário",period:"Abril de 2020 – atual",detail:"Auditoria tributária e recuperação de créditos tributários",place:"Curitiba, Paraná · Remoto"}
+];
+const education=[
+{course:"Bacharelado em Direito",school:"Universidade Tuiuti do Paraná (UTP)",period:"2022–2026"},
+{course:"Bacharelado em Ciências Contábeis",school:"UNINTER – Centro Universitário Internacional",period:"2016–2019"},
+{course:"Especialização em Gestão de Risco, Compliance e Auditoria",school:"Pontifícia Universidade Católica do Paraná (PUCPR)",period:"Período não informado"}
+];
+const skills=["SPED","Auditoria tributária","Recuperação de créditos tributários","Planejamento fiscal","Contabilidade fiscal","Tributação e impostos","Escrituração","Análise","Compliance","Auditoria"];
+export default function Home(){
+const [menuOpen,setMenuOpen]=useState(false);const closeMenu=()=>setMenuOpen(false);
+return <main>
+<header className="site-header">
+<a className="brand" href="#inicio" aria-label="Página inicial"><span className="brand-mark">K<span>.</span></span><span className="brand-name">KARINE KLUPPELL<small>CONTABILIDADE • CONSULTORIA TRIBUTÁRIA</small></span></a>
+<nav className={"desktop-nav"+(menuOpen?" nav-open":"")}><a href="#sobre" onClick={closeMenu}>Sobre</a><a href="#atuacao" onClick={closeMenu}>Atuação</a><a href="#trajetoria" onClick={closeMenu}>Trajetória</a><a href="#reforma" onClick={closeMenu}>Reforma Tributária</a><a href="#contato" onClick={closeMenu}>Contato</a></nav>
+<a className="header-cta" href="#contato">Vamos conversar <ArrowUpRight size={15}/></a><button className="mobile-menu" aria-label={menuOpen?"Fechar menu":"Abrir menu"} aria-expanded={menuOpen} onClick={()=>setMenuOpen(open=>!open)}><Menu/></button>
+</header>
+<section className="hero" id="inicio"><div className="hero-content"><p className="eyebrow">16 ANOS DE EXPERIÊNCIA • ESTRATÉGIA • VISÃO TRIBUTÁRIA</p><h1>Tributação além dos números.<br/><em>Estratégia para os negócios.</em></h1><div className="hero-portrait"><img src="/projeto-contabilidade/file_00000000c0a8820ea316f43b818a04cc.png" alt="Foto profissional de Karine Kluppell"/></div><p className="hero-copy">Contabilidade, auditoria e consultoria tributária com olhar estratégico para os desafios reais das empresas e para as transformações da Reforma Tributária.</p><a className="hero-link" href="#sobre">Conheça minha trajetória <ArrowDown size={16}/></a></div></section>
+<section className="intro section-pad" id="sobre"><div className="intro-kicker"><span className="small-rule"/> SOBRE KARINE</div><div className="intro-grid"><h2>Experiência técnica.<br/><em>Visão estratégica.</em></h2><div className="intro-text"><p>Sou contadora há 16 anos e, ao longo dessa trajetória, aprendi que a área tributária vai muito além de números — envolve estratégia, análise e tomada de decisão.</p><p>Atuo em consultoria tributária, lidando com desafios reais das empresas, especialmente em recuperação de créditos e planejamento fiscal. É um trabalho que exige conhecimento técnico e atenção às mudanças constantes da legislação.</p><p>Atualmente, também sou estudante de Direito, o que amplia minha visão e aprofunda minha forma de compreender o sistema tributário.</p><p>Acredito em uma contabilidade mais próxima do negócio, estratégica e com propósito: ajudar empresas a crescer com segurança e inteligência.</p></div></div></section>
+<section className="areas section-pad" id="atuacao"><div className="section-heading"><div><span className="small-rule"/> ÁREAS DE ATUAÇÃO</div><p>Conhecimento tributário<br/><em>aplicado à realidade.</em></p></div><div className="tax-grid">{topics.map(({icon:Icon,title,text})=><article className="tax-card" key={title}><Icon className="tax-icon" strokeWidth={1.35}/><h3>{title}</h3><p>{text}</p></article>)}</div></section>
+<section className="statement" id="reforma"><div className="statement-content"><span className="small-rule"/> REFORMA TRIBUTÁRIA<h2>O sistema está mudando.<br/><em>O planejamento também.</em></h2><p>A transição exige atenção às novas regras, aos documentos fiscais e aos reflexos de cada etapa na operação das empresas.</p><a className="text-link" href="https://www.gov.br/receitafederal/pt-br/acesso-a-informacao/acoes-e-programas/reforma-tributaria-do-consumo/entenda/entenda-a-reforma-tributaria-do-consumo" target="_blank" rel="noreferrer">Acompanhe as informações oficiais <ArrowUpRight size={17}/></a></div><div className="timeline">{timeline.map(item=><article className="timeline-item" key={item.year}><span className="timeline-year">{item.year}</span><div><h3>{item.title}</h3><p>{item.text}</p></div></article>)}</div><p className="timeline-note">Cronograma geral conforme informações oficiais da Receita Federal. A aplicação das regras depende da legislação vigente e do enquadramento de cada contribuinte.</p></section>
+<section className="profile section-pad" id="trajetoria"><div className="profile-photo"><img src="/projeto-contabilidade/file_00000000c0a8820ea316f43b818a04cc.png" alt="Foto profissional de Karine Kluppell"/></div><div className="profile-copy"><span className="small-rule"/> EXPERIÊNCIA PROFISSIONAL<h2>Trajetória<br/><em>e formação.</em></h2><div className="career-list">{experience.map(item=><article className="career-item" key={item.company}><span>{item.period}</span><h3>{item.role} · {item.company}</h3><p>{item.detail}</p><small>{item.place}</small></article>)}</div></div></section>
+<section className="education-section section-pad"><div className="section-heading"><div><span className="small-rule"/> FORMAÇÃO ACADÊMICA</div><p>Aprendizado<br/><em>contínuo.</em></p></div><div className="education-list">{education.map(item=><article className="education-item" key={item.school}><GraduationCap className="tax-icon" strokeWidth={1.35}/><div><h3>{item.course}</h3><p>{item.school}</p></div><span>{item.period}</span></article>)}</div><div className="skills-block"><span className="tax-label">COMPETÊNCIAS</span><div className="skill-list">{skills.map(skill=><span key={skill}>{skill}</span>)}</div></div></section>
+<section className="contact section-pad" id="contato"><div className="contact-top"><span className="small-rule"/> CONTATO PROFISSIONAL</div><div className="contact-grid"><h2>Vamos conversar<br/><em>sobre os desafios tributários?</em></h2><div className="contact-details"><p>Um espaço para trocar informações sobre auditoria tributária, recuperação de créditos, planejamento fiscal e os impactos da Reforma Tributária.</p><p>Os canais de contato serão incluídos após confirmação dos dados profissionais oficiais.</p><a className="text-link" href="#inicio">Voltar ao início <ArrowUpRight size={17}/></a></div></div></section>
+<footer className="footer"><a className="brand brand-footer" href="#inicio"><span className="brand-mark">K<span>.</span></span><span className="brand-name">KARINE KLUPPELL<small>CONTABILIDADE • CONSULTORIA TRIBUTÁRIA</small></span></a><span>© {new Date().getFullYear()} — Todos os direitos reservados.</span><div className="socials"><a href="https://www.linkedin.com/in/karine-kluppell-8748bb114" aria-label="LinkedIn" target="_blank" rel="noreferrer"><BriefcaseBusiness size={17}/></a></div></footer>
+</main>;
 }
