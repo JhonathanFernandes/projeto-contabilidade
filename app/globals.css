@@ -238,3 +238,61 @@ html,body{background:var(--cream);color:var(--ink)}
 .tax-card{animation:card-rise .65s both}.tax-card:nth-child(2){animation-delay:.06s}.tax-card:nth-child(3){animation-delay:.12s}.tax-card:nth-child(4){animation-delay:.18s}.tax-card:nth-child(5){animation-delay:.24s}.tax-card:nth-child(6){animation-delay:.30s}
 @keyframes card-rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
 }
+
+/* Movimento refinado dos seis cards de atuação */
+@keyframes tax-card-enter{
+  0%{opacity:0;transform:translate3d(0,34px,0) scale(.975);filter:blur(3px)}
+  65%{opacity:1;transform:translate3d(0,-5px,0) scale(1);filter:blur(0)}
+  100%{opacity:1;transform:translate3d(0,0,0) scale(1);filter:blur(0)}
+}
+@keyframes tax-card-sway{
+  0%,100%{transform:translateY(-8px) rotate(0deg)}
+  22%{transform:translateY(-11px) rotate(-.7deg)}
+  48%{transform:translateY(-5px) rotate(.55deg)}
+  72%{transform:translateY(-9px) rotate(-.3deg)}
+}
+.tax-grid .tax-card-link{
+  transform-origin:center bottom;
+  will-change:transform,opacity;
+  animation:tax-card-enter .8s cubic-bezier(.2,.75,.25,1) both;
+}
+.tax-grid .tax-card-link:nth-child(1){animation-delay:.08s}
+.tax-grid .tax-card-link:nth-child(2){animation-delay:.2s}
+.tax-grid .tax-card-link:nth-child(3){animation-delay:.32s}
+.tax-grid .tax-card-link:nth-child(4){animation-delay:.44s}
+.tax-grid .tax-card-link:nth-child(5){animation-delay:.56s}
+.tax-grid .tax-card-link:nth-child(6){animation-delay:.68s}
+.tax-grid .tax-card-link:hover{
+  animation:tax-card-sway 1.05s ease-in-out infinite;
+  border-color:#bd805e;
+  background:#fff;
+  box-shadow:0 24px 48px #243c5526,0 5px 0 #bd805e20;
+  z-index:2;
+}
+.tax-grid .tax-card-link:active{
+  animation:none;
+  transform:translateY(2px) scale(.975);
+  box-shadow:0 7px 18px #243c5518;
+  transition:transform .12s ease,box-shadow .12s ease;
+}
+.tax-grid .tax-card-link:focus-visible{
+  outline:2px solid #bd805e;
+  outline-offset:5px;
+}
+.tax-grid .tax-card-link .tax-icon,
+.tax-grid .tax-card-link h3,
+.tax-grid .tax-card-link p,
+.tax-grid .tax-card-link .tax-card-more{
+  transition:transform .3s ease,color .3s ease;
+}
+.tax-grid .tax-card-link:hover .tax-icon{transform:translateY(-5px) rotate(-7deg);color:#bd805e}
+.tax-grid .tax-card-link:hover h3{transform:translateX(3px)}
+.tax-grid .tax-card-link:hover .tax-card-more{transform:translateX(5px);color:#9b6245}
+@media(hover:none){
+  .tax-grid .tax-card-link:active{transform:scale(.975);animation:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .tax-grid .tax-card-link,.tax-grid .tax-card-link:hover{
+    animation:none!important;transition:none!important;transform:none!important
+  }
+}
