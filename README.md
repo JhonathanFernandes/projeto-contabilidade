@@ -21,6 +21,23 @@ Interface institucional com seções de apresentação, serviços, trajetória, 
 - Integração de links externos para redes sociais e WhatsApp.
 - Publicação estática no GitHub Pages.
 
+
+## Galeria do projeto
+
+Capturas de tela da interface do website de contabilidade.
+
+![Website de Contabilidade — tela 1](screenshots/site-contabilidade-01.png)
+
+![Website de Contabilidade — tela 2](screenshots/site-contabilidade-02.png)
+
+![Website de Contabilidade — tela 3](screenshots/site-contabilidade-03.png)
+
+![Website de Contabilidade — tela 4](screenshots/site-contabilidade-04.png)
+
+![Website de Contabilidade — tela 5](screenshots/site-contabilidade-05.png)
+
+![Website de Contabilidade — tela 6](screenshots/site-contabilidade-06.png)
+
 ## Stack técnica
 
 Versões declaradas em `package.json`:
