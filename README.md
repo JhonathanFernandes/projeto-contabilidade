@@ -1,8 +1,8 @@
-# Projeto Contabilidade | JHOWDEV
+# Website de Contabilidade
 
 **Desenvolvimento web • Interface responsiva • Experiência visual • Animações interativas**
 
-Projeto de desenvolvimento de um site institucional para o segmento de contabilidade e consultoria tributária, apresentado como parte do trabalho de **Jhonathan Fernandes (JHOWDEV)**.
+Projeto de desenvolvimento de um **website de contabilidade**, criado por **Jhonathan Fernandes (JHOWDEV)**, com foco em interface, experiência de navegação e implementação front-end.
 
 O foco deste repositório é demonstrar a implementação técnica, a estrutura do front-end, a experiência de navegação e as decisões de interface. A identidade e os conteúdos profissionais da cliente fazem parte da aplicação, mas não são o tema principal desta documentação.
 
