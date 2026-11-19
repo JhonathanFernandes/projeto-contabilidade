@@ -1741,6 +1741,7 @@ body.intro-active{overflow:hidden;}
 @media(max-width:850px){
   html,body{width:100%;min-width:0;overflow-x:hidden!important;overscroll-behavior-x:none;touch-action:pan-y;}
   body>*,main{width:100%;max-width:100vw;min-width:0;overflow-x:hidden!important;}
-  .partner-marquee,.partner-track{max-width:100%;overflow:hidden;}
+  .partner-marquee{max-width:100%;overflow:hidden;}
+  .partner-track{width:max-content!important;max-width:none!important;overflow:visible!important;animation:partner-marquee 22s linear infinite!important;animation-play-state:running!important;}
 }
 .area-panel.area-panel-pressed{animation:area-card-wiggle .26s ease-in-out both!important;box-shadow:0 16px 28px rgb(27 52 77 / .2);}
