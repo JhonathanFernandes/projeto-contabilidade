@@ -1743,3 +1743,4 @@ body.intro-active{overflow:hidden;}
   body>*,main{width:100%;max-width:100vw;min-width:0;overflow-x:hidden!important;}
   .partner-marquee,.partner-track{max-width:100%;overflow:hidden;}
 }
+.area-panel.area-panel-pressed{animation:area-card-wiggle .26s ease-in-out both!important;box-shadow:0 16px 28px rgb(27 52 77 / .2);}
