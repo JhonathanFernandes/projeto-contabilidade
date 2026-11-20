@@ -1564,7 +1564,7 @@ body.intro-active{overflow:hidden;}
   height:100%;
   object-fit:contain!important;
   object-position:center!important;
-  transform:scale(.76);
+  transform:scale(.96);
 }
 .intro-loading{
   display:inline-flex;
@@ -1587,8 +1587,8 @@ body.intro-active{overflow:hidden;}
 @keyframes intro-spin{to{transform:rotate(360deg);}}
 @media(prefers-reduced-motion:reduce){.intro-loader{animation:none;}}
 @media(max-width:600px){
-  .site-intro{gap:22px;padding:20px;}
-  .intro-video-frame{width:100%;aspect-ratio:4/5;}
+  .site-intro{gap:22px;padding:16px 8px;}
+  .intro-video-frame{width:min(92vw,45svh);max-height:80svh;aspect-ratio:9/16;}
 }
 
 /* Ajustes de interação e composição para telas de toque. */
