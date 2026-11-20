@@ -41,7 +41,7 @@ return <>
 {introOpen&&<section className="site-intro" aria-label="Abertura do site">
   <div className="intro-video-frame">
     <video className="intro-video" autoPlay muted playsInline preload="auto" onTimeUpdate={event=>{if(event.currentTarget.currentTime>=5)setIntroOpen(false)}} onEnded={()=>setIntroOpen(false)} onError={()=>setIntroOpen(false)}>
-      <source src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/video-inicio-sem-fundo.webm`} type="video/webm"/>
+      <source src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/video-abertura-v3.webm`} type="video/webm"/>
     </video>
   </div>
   <p className="intro-loading" aria-live="polite"><span className="intro-loader" aria-hidden="true"/> Carregando...</p>

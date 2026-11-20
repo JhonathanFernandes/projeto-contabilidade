@@ -1588,7 +1588,7 @@ body.intro-active{overflow:hidden;}
 @media(prefers-reduced-motion:reduce){.intro-loader{animation:none;}}
 @media(max-width:600px){
   .site-intro{gap:22px;padding:16px 8px;}
-  .intro-video-frame{width:min(72vw,280px);max-height:62svh;aspect-ratio:9/16;}
+  .intro-video-frame{width:min(58vw,220px);max-height:50svh;aspect-ratio:9/16;}
 }
 
 /* Ajustes de interação e composição para telas de toque. */
