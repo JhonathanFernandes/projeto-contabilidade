@@ -1564,7 +1564,7 @@ body.intro-active{overflow:hidden;}
   height:100%;
   object-fit:contain!important;
   object-position:center!important;
-  transform:scale(.84);
+  transform:scale(.76);
 }
 .intro-loading{
   display:inline-flex;
