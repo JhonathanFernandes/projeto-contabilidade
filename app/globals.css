@@ -367,6 +367,7 @@ html,body{max-width:100%;overflow-x:hidden;}
       transform:translate3d(0,-12px,0) scale(1.04);
       background:rgb(219 232 242 / .8);
       box-shadow:0 22px 38px rgb(27 52 77 / .26);
+      transition-delay:0ms!important;
     }
   }
 }
